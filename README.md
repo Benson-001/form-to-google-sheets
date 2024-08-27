@@ -44,4 +44,30 @@ function doPost(e) {
   }
 }
 
+## Input your web app URL
+## Web App URL Integration
+
+To set up your form to submit data to Google Sheets, follow these steps:
+
+1. **Input your web app URL**: Open the file named `index.html`.
+2. **Replace the script URL**: On line 12, replace `<SCRIPT URL>` with your script URL:
+
+   ```html
+   <form name="submit-to-google-sheet">
+     <input name="email" type="email" placeholder="Email" required>
+     <button type="submit">Send</button>
+   </form>
+
+   <script>
+     const scriptURL = '<SCRIPT URL>'
+     const form = document.forms['submit-to-google-sheet']
+
+     form.addEventListener('submit', e => {
+       e.preventDefault()
+       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+         .then(response => console.log('Success!', response))
+         .catch(error => console.error('Error!', error.message))
+     })
+   </script>
+
 
