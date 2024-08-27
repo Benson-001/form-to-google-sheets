@@ -316,7 +316,7 @@ form .btn2{
     color: #ff004f;
 }
 /* ...................css for small screen............. */
-nav .fas{
+nav .fa-solid{
     display: none;
 }
 
@@ -331,7 +331,7 @@ nav .fas{
     .header-text h1{
         font-size: 30px;
     }
-    nav .fas{
+    nav .fa-solid{
         display: block;
         font-size: 25px;
     }
@@ -378,4 +378,9 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
