@@ -69,5 +69,20 @@ To set up your form to submit data to Google Sheets, follow these steps:
          .catch(error => console.error('Error!', error.message))
      })
    </script>
+## Adding Additional Form Data
+
+To capture additional data in your Google Sheet, follow these steps:
+
+1. **Create new columns**: Open your Google Sheet and add new columns for the additional data you want to capture. Ensure the column titles match exactly with the `name` attributes from your form inputs.
+
+2. **Update your form**: Modify your form in `index.html` to include additional input fields. For example, to capture first and last names, your form should look like this:
+
+   ```html
+   <form name="submit-to-google-sheet">
+     <input name="email" type="email" placeholder="Email" required>
+     <input name="firstName" type="text" placeholder="First Name">
+     <input name="lastName" type="text" placeholder="Last Name">
+     <button type="submit">Send</button>
+   </form>
 
 
